@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Course Details</title>
-</head>
-<body>
+
+<x-layouts.app title="Course Details">
 
     <h1>Course Details</h1>
 
@@ -22,9 +18,12 @@
         {{ $course->is_active ? 'Yes' : 'No' }}
     </p>
 
-    <br>
+    <a href="{{ route('courses.edit', $course) }}" class="btn">
+        Edit Course
+    </a>
 
-    <a href="/courses">Back to Courses</a>
+    <a href="{{ route('courses.index') }}">
+        Back to Courses
+    </a>
 
-</body>
-</html>
+</x-layouts.app>
